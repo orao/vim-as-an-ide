@@ -168,3 +168,12 @@ augroup END
 " better man page support
 noremap K :SuperMan <cword><CR>
 
+" ----- Custom user settings -----
+" Remove automatic indentation for C/C++ source files.
+set nocindent
+
+" Draw the background of columns 81 through 999 a lighter colour
+" See http://stackoverflow.com/questions/2447109/showing-a-different-background-colour-in-vim-past-80-characters
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+
